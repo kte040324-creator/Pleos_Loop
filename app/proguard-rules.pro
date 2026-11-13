@@ -1,0 +1,1 @@
+-keepclassmembers class com.loop.pleos.TtsBridge { @android.webkit.JavascriptInterface <methods>; }

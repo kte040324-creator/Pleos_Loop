@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1280" viewBox="20 20 840 1280" fill="none">
+<g clip-path="url(#clip0_2124_7106)">
+<mask id="path-1-outside-1_2124_7106" maskUnits="userSpaceOnUse" x="0" y="0" width="2600" height="1480" fill="black">
+<rect fill="white" width="2600" height="1480" />
+<path d="M20 44C20 30.7451 30.7452 20 44 20H2556C2569.25 20 2580 30.7452 2580 44V1436C2580 1449.25 2569.25 1460 2556 1460H43.9999C30.7451 1460 20 1449.25 20 1436V44Z" />
+</mask>
+<g clip-path="url(#clip1_2124_7106)">
+<g clip-path="url(#clip2_2124_7106)">
+<path d="M489.5 126L1023.5 1498H1003L488 126H489.5Z" fill="#CBCDD6" />
+<path d="M392.5 126L-129.5 1498H-109L394 126H392.5Z" fill="#C5C7D0" />
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2124_7106">
+<path d="M20 44C20 30.7451 30.7452 20 44 20H2556C2569.25 20 2580 30.7452 2580 44V1436C2580 1449.25 2569.25 1460 2556 1460H43.9999C30.7451 1460 20 1449.25 20 1436V44Z" fill="white" />
+</clipPath>
+<clipPath id="clip1_2124_7106">
+<rect width="840" height="1280" fill="white" transform="translate(20 20)" />
+</clipPath>
+<clipPath id="clip2_2124_7106">
+<rect width="840" height="1280" fill="white" transform="translate(20 20)" />
+</clipPath>
+</defs>
+</svg>
