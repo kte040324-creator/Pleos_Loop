@@ -3,6 +3,8 @@
 import sys, os
 p = sys.argv[1]; d = os.path.dirname(p)
 s = open(p, encoding="utf-8").read()
+if '<meta charset' not in s[:500]:
+    s = '<meta charset="utf-8">\n' + s
 if "tts-shim.js" not in s:
     i = s.find("<script")
     s = s[:i] + '<script src="tts-shim.js"></script>\n' + s[i:]
