@@ -18,25 +18,31 @@
 
 ## APK
 - 위치: [`apk/루프_Loop_release.apk`](apk/) (release 빌드)
-- 용량 초과 시: [GitHub Releases](https://github.com/kte040324-creator/Pleos_Loop/releases)
 
 ## 실행 방법
 1. `apk/` 폴더의 APK를 기기(또는 에뮬레이터)에 설치
    ```bash
    adb install -r apk/루프_Loop_release.apk
    ```
-2. 앱 실행 → 화면을 한 번 터치하면 튜토리얼이 시작되고 음성 안내가 켜집니다
+2. 앱 실행 → 첫 화면에서 **튜토리얼**(처음 사용) 또는 **건너뛰기**를 누르면 시작되고, 첫 터치 후부터 음성 안내가 나옵니다
 3. 인터넷 연결 없이 동작합니다 (폰트·라이브러리·지도 데이터 모두 앱에 포함)
 
 ## 테스트 환경 및 필요한 설정
-- 화면: 가로 2560×1440 (17인치), density 320 (디자인 기준 1280×720)
+- 테스트 기기: Pleos Connect Emulator v2.1.0 (Android Studio AVD, API 34, arm64, RAM 4GB, Cold boot)
+- 화면: 가로 2560×1440, 앱 창 안에서 디자인 기준 1280×720을 비율 유지로 맞춰 표시
 - Android: 9 (API 28) 이상, targetSdk 35
 - 음성 안내가 안 나오면: 설정 → 텍스트 음성 변환(TTS) → Google TTS 한국어 음성 데이터 설치
 - 차량 데이터(좌석 센서·연료·주행 상태·내비)는 앱 안에서 시뮬레이션되므로 별도 설정 불필요
 
 ## Pleos Connect 에뮬레이터
-- 버전: (기입 예정)
-- 화면 규격: 2560×1440 가로, density 320
+- 버전: **Pleos Connect Emulator v2.1.0** (`system-images;android-34;pleos_car_emulator;arm64-v8a`, 빌드 `release_connect_v2.1.0`)
+- 화면 규격: 2560×1440 가로, 12.8인치, density 160 (mdpi) — 기기 정의 "Pleos Connect v2.1.0"
+- 설치: [Pleos Connect Emulator 설치 및 실행](https://document.pleos.ai/docs/connect/guide/getting-started/application-development/setup-connect-sdk-emulator)
+
+## 스크린샷
+Pleos Connect Emulator v2.1.0에서 실행한 첫 화면
+
+![Pleos Connect Emulator 실행 화면](docs/screens/pleos_emulator_welcome.png)
 
 ## 시연 영상
 (링크 추가 예정)
