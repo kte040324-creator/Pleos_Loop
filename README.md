@@ -17,13 +17,13 @@
 - **반납 완료** — 여행 기록 요약, QR로 가져가기, 기록 지우고 마치기
 
 ## APK
-- 위치: [`apk/팀명_Loop_release.apk`](apk/) (release 빌드)
+- 위치: [`apk/루프_Loop_release.apk`](apk/) (release 빌드)
 - 용량 초과 시: [GitHub Releases](https://github.com/kte040324-creator/Pleos_Loop/releases)
 
 ## 실행 방법
 1. `apk/` 폴더의 APK를 기기(또는 에뮬레이터)에 설치
    ```bash
-   adb install -r apk/팀명_Loop_release.apk
+   adb install -r apk/루프_Loop_release.apk
    ```
 2. 앱 실행 → 화면을 한 번 터치하면 튜토리얼이 시작되고 음성 안내가 켜집니다
 3. 인터넷 연결 없이 동작합니다 (폰트·라이브러리·지도 데이터 모두 앱에 포함)

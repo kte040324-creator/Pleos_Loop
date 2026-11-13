@@ -11,3 +11,4 @@ captures/
 *.keystore
 *.jks
 # apk/ 폴더의 release APK는 제출용이라 커밋한다
+.kotlin/
