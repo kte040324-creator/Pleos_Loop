@@ -52,7 +52,7 @@ Pleos Connect Emulator v2.1.0에서 실행한 첫 화면
 ![Pleos Connect Emulator 실행 화면](docs/screens/pleos_emulator_welcome.png)
 
 ## 시연 영상
-[▶ 시연 영상 보기 (docs/video/loop_demo_pleos.mp4)](docs/video/loop_demo_pleos.mp4) — 3분 37초, 1920×1080, 음성 포함
+[▶ 시연 영상 보기 (docs/video/loop_demo_pleos.mp4)](docs/video/loop_demo_pleos.mp4) — 4분 15초, 1920×1080, Pleos TTS 음성 포함
 
 Pleos Connect Emulator v2.1.0에서 튜토리얼부터 반납 완료(기록 지우고 마치기)까지 전체 흐름을 녹화했습니다.
 
