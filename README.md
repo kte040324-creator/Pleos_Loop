@@ -65,7 +65,7 @@ Pleos Connect Emulator v2.1.0에서 실행한 첫 화면
 | 경로 | 내용 |
 |---|---|
 | `web/` | 화면 원본 (HTML/CSS/JS 단일 파일 + 이미지·지도 데이터) |
-| `app/` | 안드로이드 앱 (전체화면 WebView + 안드로이드 TTS 연결) |
+| `app/` | 안드로이드 앱 (전체화면 WebView + Pleos TextToSpeech 연결) |
 | `docs/` | 화면 흐름·디자인 문서 |
 | `tools/` | web → app 동기화 스크립트 |
 
