@@ -29,10 +29,17 @@
 - 테스트 기기: Pleos Connect Emulator v2.1.0 (Android Studio AVD, API 34, arm64, RAM 4GB, Cold boot)
 - 화면: 가로 2560×1440, 앱 창 안에서 디자인 기준 1280×720을 비율 유지로 맞춰 표시
 - Android: 9 (API 28) 이상, targetSdk 35
-- 음성 안내: 주요 안내 문구는 앱에 미리 녹음된 음성(`app/src/main/assets/voice/`)으로 재생되어 Pleos Connect Emulator에서도 나옵니다.
-  Pleos Connect Emulator에는 안드로이드 표준 TTS 엔진이 없어, 녹음되지 않은 문구(선택에 따라 달라지는 일부 안내)는 소리가 나지 않습니다.
-  일반 안드로이드 기기에서는 녹음되지 않은 문구를 기기 TTS로 읽습니다. 이때 소리가 안 나면 설정 → 텍스트 음성 변환(TTS) → Google TTS 한국어 음성 데이터 설치
+- 음성 안내: Pleos 차량(Pleos Connect Emulator)에서는 **Pleos Connect SDK의 TextToSpeech**(온디바이스 모드)로 모든 안내를 읽습니다.
+  Pleos TTS를 쓸 수 없는 일반 안드로이드 기기에서는 주요 문구는 앱에 녹음된 음성(`app/src/main/assets/voice/`)으로, 나머지는 기기 TTS로 읽습니다.
+  일반 기기에서 소리가 안 나면 설정 → 텍스트 음성 변환(TTS) → Google TTS 한국어 음성 데이터 설치
 - 차량 데이터(좌석 센서·연료·주행 상태·내비)는 앱 안에서 시뮬레이션되므로 별도 설정 불필요
+
+## Pleos Connect SDK
+| SDK | 버전 | 사용처 |
+|---|---|---|
+| `ai.pleos.playground:TextToSpeech` | 3.3.1 | 음성 안내 (`TtsBridge.kt`, 권한 `pleos.car.permission.TTS_SERVICE`) |
+
+저장소: `https://nexus-playground.pleos.ai/repository/maven-releases` (`settings.gradle.kts`)
 
 ## Pleos Connect 에뮬레이터
 - 버전: **Pleos Connect Emulator v2.1.0** (`system-images;android-34;pleos_car_emulator;arm64-v8a`, 빌드 `release_connect_v2.1.0`)

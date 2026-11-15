@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 앱 내부 자산만 쓰므로 인터넷 권한은 필요 없음(폰트·lottie를 assets로 옮긴 뒤 기준) -->
+    <!-- 화면은 앱 내부 자산만 씀(폰트·lottie 포함). INTERNET 권한은 Pleos TTS SDK가 자체적으로 추가함 -->
+    <!-- Pleos Connect SDK TextToSpeech 사용 권한 (protectionLevel=normal) -->
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+
     <queries>
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />

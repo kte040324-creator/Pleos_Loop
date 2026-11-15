@@ -1,8 +1,8 @@
 // Android WebView에는 speechSynthesis가 없거나 한국어 음성이 없음 → 앱에서 대신 말해줌.
 // loop.html의 speak()/speechSynthesis.cancel() 코드는 그대로 두고 이 파일이 대신 받아줌.
-// 1) voice/index.json에 있는 문구는 미리 녹음한 음성(voice/*.m4a)을 재생
-//    (Pleos 에뮬레이터에는 안드로이드 표준 TTS 엔진이 없어서 필요. tools/make-voice.py로 생성)
-// 2) 녹음이 없는 문구는 안드로이드 TTS(window.AndroidTTS)로 넘김
+// 1) Pleos 차량: Pleos Connect SDK TextToSpeech(AndroidTTS.isPleos())로 모든 문구를 말함
+// 2) Pleos TTS를 못 쓰면: voice/index.json에 있는 문구는 미리 녹음한 음성(voice/*.m4a) 재생
+//    (tools/make-voice.py로 생성), 녹음이 없는 문구는 안드로이드 표준 TTS로 넘김
 (function(){
   if(!window.AndroidTTS)return; // 브라우저에서 열면 아무것도 안 함
   var clips=null,au=null;
@@ -12,7 +12,8 @@
   window.SpeechSynthesisUtterance=U;
   var ss={
     speak:function(u){
-      var t=String(u.text||'').trim(),f=clips&&clips[t];
+      var p=false;try{p=AndroidTTS.isPleos()}catch(e){}
+      var t=String(u.text||'').trim(),f=!p&&clips&&clips[t];
       stopClip();try{AndroidTTS.stop()}catch(e){}
       if(f){au=new Audio('voice/'+f);au.play().catch(function(){});return}
       try{AndroidTTS.speak(t,Number(u.rate||1))}catch(e){}
