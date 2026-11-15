@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 A=app/src/main/assets
-find "$A" -mindepth 1 -maxdepth 1 ! -name tts-shim.js ! -name vendor ! -name fonts -exec rm -rf {} +
+find "$A" -mindepth 1 -maxdepth 1 ! -name tts-shim.js ! -name vendor ! -name fonts ! -name voice -exec rm -rf {} +
 cp -r web/. "$A"/
 mv "$A/loop.html" "$A/index.html"
 python3 tools/patch_app_html.py "$A/index.html"

@@ -4,8 +4,6 @@
 
 렌터카를 빌린 순간부터 반납할 때까지, 차 안에서 여행 일정·경로·반납 준비를 함께하는 차량 인포테인먼트 앱입니다.
 
-> 이 저장소는 **화면 프로토타입**입니다. 차량 데이터(좌석 센서·연료·주행 상태·내비)는 시뮬레이션이며, Pleos SDK 연동은 포함하지 않습니다.
-
 ## 주요 기능
 - **튜토리얼** — Driving View와 Loop 창의 역할을 미니 화면으로 안내
 - **여행 설정** — 숙소, 반납 일정·지점, 동승자(좌석 센서·카시트), 여행 취향
@@ -17,12 +15,12 @@
 - **반납 완료** — 여행 기록 요약, QR로 가져가기, 기록 지우고 마치기
 
 ## APK
-- 위치: [`apk/루프_Loop_release.apk`](apk/) (release 빌드)
+- 위치: [`apk/Loop_Loop_release.apk`](apk/) (release 빌드)
 
 ## 실행 방법
 1. `apk/` 폴더의 APK를 기기(또는 에뮬레이터)에 설치
    ```bash
-   adb install -r apk/루프_Loop_release.apk
+   adb install -r apk/Loop_Loop_release.apk
    ```
 2. 앱 실행 → 첫 화면에서 **튜토리얼**(처음 사용) 또는 **건너뛰기**를 누르면 시작되고, 첫 터치 후부터 음성 안내가 나옵니다
 3. 인터넷 연결 없이 동작합니다 (폰트·라이브러리·지도 데이터 모두 앱에 포함)
@@ -31,7 +29,9 @@
 - 테스트 기기: Pleos Connect Emulator v2.1.0 (Android Studio AVD, API 34, arm64, RAM 4GB, Cold boot)
 - 화면: 가로 2560×1440, 앱 창 안에서 디자인 기준 1280×720을 비율 유지로 맞춰 표시
 - Android: 9 (API 28) 이상, targetSdk 35
-- 음성 안내가 안 나오면: 설정 → 텍스트 음성 변환(TTS) → Google TTS 한국어 음성 데이터 설치
+- 음성 안내: 주요 안내 문구는 앱에 미리 녹음된 음성(`app/src/main/assets/voice/`)으로 재생되어 Pleos Connect Emulator에서도 나옵니다.
+  Pleos Connect Emulator에는 안드로이드 표준 TTS 엔진이 없어, 녹음되지 않은 문구(선택에 따라 달라지는 일부 안내)는 소리가 나지 않습니다.
+  일반 안드로이드 기기에서는 녹음되지 않은 문구를 기기 TTS로 읽습니다. 이때 소리가 안 나면 설정 → 텍스트 음성 변환(TTS) → Google TTS 한국어 음성 데이터 설치
 - 차량 데이터(좌석 센서·연료·주행 상태·내비)는 앱 안에서 시뮬레이션되므로 별도 설정 불필요
 
 ## Pleos Connect 에뮬레이터
