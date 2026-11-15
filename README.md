@@ -1,6 +1,6 @@
-# Loop — 제주 렌터카 여행 동반 차량 앱
+# Loop: 렌터카 여행 동반 차량 앱
 
-2026 현대자동차그룹 **Pleos Connect** 앱 공모전 출품작 프로토타입.
+2026 현대자동차그룹 Pleos Connect 앱 공모전 출품작 프로토타입.
 
 렌터카를 빌린 순간부터 반납할 때까지, 차 안에서 여행 일정·경로·반납 준비를 함께하는 차량 인포테인먼트 앱입니다.
 
@@ -53,8 +53,6 @@ Pleos Connect Emulator v2.1.0에서 실행한 첫 화면
 
 ## 시연 영상
 [▶ 시연 영상 보기 (docs/video/loop_demo_pleos.mp4)](docs/video/loop_demo_pleos.mp4) — 4분 15초, 1920×1080, Pleos TTS 음성 포함
-
-Pleos Connect Emulator v2.1.0에서 튜토리얼부터 반납 완료(기록 지우고 마치기)까지 전체 흐름을 녹화했습니다.
 
 ## 빌드
 ```bash
