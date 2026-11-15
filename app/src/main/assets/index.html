@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Loop 차량 앱</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -2136,7 +2137,7 @@ function syncGlass(){document.querySelectorAll('#unit .win.blr .lab, #unit .win.
 })();
 </script>
 
-<style id="app-crop">html,body{margin:0!important;padding:0!important;overflow:hidden!important}#stage{position:fixed!important;inset:0!important;width:auto!important;height:auto!important;overflow:hidden!important}#unit{box-shadow:none!important;outline:none!important;border:0!important;border-radius:0!important}</style>
-<script id="app-crop-fit">(function(){function cropFit(){var u=document.getElementById('unit');if(!u)return;var W=innerWidth,H=innerHeight,k=Math.min(W/850,H/592),x=(W-850*k)/2-420*k,y=(H-592*k)/2-48*k;u.style.transform='translate('+x+'px,'+y+'px) scale('+k+')'}addEventListener('resize',cropFit);cropFit()})();</script>
-
 <script id="app-no-ime">(function(){function f(){var l=document.querySelectorAll('input,textarea');for(var i=0;i<l.length;i++)if(l[i].getAttribute('inputmode')!=='none')l[i].setAttribute('inputmode','none')}f();new MutationObserver(f).observe(document.documentElement,{childList:true,subtree:true})})();</script>
+
+<style id="app-crop">html,body{margin:0!important;padding:0!important;overflow:hidden!important}#stage{position:fixed!important;inset:0!important;width:auto!important;height:auto!important;overflow:hidden!important}#unit{box-shadow:none!important;outline:none!important;border:0!important;border-radius:0!important}#unit.dimon{background:var(--surface)!important}#unit .dimly{display:none!important}</style>
+<script id="app-crop-fit">(function(){function cropFit(){var u=document.getElementById('unit');if(!u)return;var W=innerWidth,H=innerHeight,k=Math.min(W/850,H/592),x=(W-850*k)/2-420*k,y=(H-592*k)/2-48*k;u.style.transform='translate('+x+'px,'+y+'px) scale('+k+')'}addEventListener('resize',cropFit);cropFit();var u=document.getElementById('unit'),T=null;if(u)new MutationObserver(function(){var on=u.classList.contains('dimon');if(on&&!T)T=setTimeout(function(){T=null;if(!u.classList.contains('dimon'))return;var b=document.querySelector('#unit [data-a="tonext"]');if(b)b.click()},4000);else if(!on&&T){clearTimeout(T);T=null}}).observe(u,{attributes:true,attributeFilter:['class']})})();</script>

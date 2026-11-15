@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
             settings.domStorageEnabled = true
             settings.mediaPlaybackRequiresUserGesture = false
             settings.textZoom = 100
+            // 빠른 연속 터치(더블탭)·두 손가락으로 화면이 확대되어 오른쪽이 잘리지 않게 확대 기능을 끔
+            settings.setSupportZoom(false)
+            settings.builtInZoomControls = false
+            settings.displayZoomControls = false
             settings.useWideViewPort = false
             settings.loadWithOverviewMode = false
             overScrollMode = WebView.OVER_SCROLL_NEVER
